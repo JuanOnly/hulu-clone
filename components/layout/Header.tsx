@@ -21,7 +21,7 @@ function Header() {
       </nav>
       <Image
         className="object-contain"
-        src="https://links.papareact.com/ua6"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/512px-Hulu_Logo.svg.png"
         width={200}
         height={100}
         alt="Hulu Logo"
