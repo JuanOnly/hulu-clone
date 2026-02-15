@@ -1,6 +1,15 @@
-const apiKey = process.env.apiKey;
+export interface RequestCategory {
+    title: string;
+    url: string;
+}
 
-export default {
+export interface Requests {
+    [key: string]: RequestCategory;
+}
+
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+
+const requests: Requests = {
     fetchTrending: {
         title: "Trending",
         url: `/trending/all/week?api_key=${apiKey}&language=en-US`,
@@ -45,7 +54,6 @@ export default {
         title: "TV Movie",
         url: `/discover/movie?api_key=${apiKey}&with_genres=10770`,
     },
+};
 
-
-    
-}
+export default requests;

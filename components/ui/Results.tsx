@@ -1,0 +1,20 @@
+import Thumbnail, { MovieResult } from "./Thumbnail";
+import FlipMove from "react-flip-move";
+
+interface ResultsProps {
+  results: MovieResult[];
+}
+
+function Results({ results }: ResultsProps) {
+  return (
+    <FlipMove className="px-5 my-10 sm:grid
+        md:grid-col-2 xl:grid-cols-3
+        ">
+      {results.map((result) => (
+        <Thumbnail key={result.id} result={result} />
+      ))}
+    </FlipMove>
+  )
+}
+
+export default Results
