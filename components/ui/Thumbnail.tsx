@@ -17,16 +17,24 @@ export interface MovieResult {
 
 interface ThumbnailProps {
   result: MovieResult;
+  onClick?: (movie: MovieResult) => void;
 }
 
-const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(({ result }, ref) => {
+const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>(({ result, onClick }, ref) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/"
   const imageSrc = `${BASE_URL}${result.backdrop_path || result.poster_path}` || `${BASE_URL}${result.poster_path}`;
   const title = result.title || result.original_name;
 
+  const handleClick = () => {
+    if (onClick) {
+      onClick(result);
+    }
+  };
+
   return (
     <article
       ref={ref}
+      onClick={handleClick}
       className="p-2 group cursor-pointer transition duration-200 
         ease-in transform sm:hover:scale-105 hover:z-50 shadow-xl"
       role="article"

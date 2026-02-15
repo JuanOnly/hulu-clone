@@ -3,7 +3,6 @@ import {
   HomeIcon,
   InformationCircleIcon,
   BoltIcon,
-  MagnifyingGlassIcon,
   UserIcon,
 } from '@heroicons/react/24/outline';
 import Image from "next/image";
@@ -17,7 +16,6 @@ function Header() {
         <HeaderItem title='HOME' Icon={HomeIcon} href='/' />
         <HeaderItem title='TRENDING' Icon={BoltIcon} />
         <HeaderItem title='VERIFIED' Icon={CheckBadgeIcon} />
-        <HeaderItem title='SEARCH' Icon={MagnifyingGlassIcon} />
         <HeaderItem title='ABOUT' Icon={InformationCircleIcon} href='/about' />
         <HeaderItem title='ACCOUNT' Icon={UserIcon} />
       </nav>
