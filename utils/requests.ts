@@ -7,7 +7,7 @@ export interface Requests {
     [key: string]: RequestCategory;
 }
 
-const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const apiKey = process.env.apiKey;
 
 const requests: Requests = {
     fetchTrending: {
